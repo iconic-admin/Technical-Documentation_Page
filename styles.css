@@ -1,0 +1,38 @@
+/*   */
+
+body {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: grey;
+}
+
+#navbar {
+    display: flex;
+    margin: auto;
+    flex-flow: column;
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    align-items: left;
+    background-color: blue;
+}
+
+#main-doc {
+    display: flex;
+    margin: auto;
+    flex-flow: column;
+    background-color: green;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    #navbar {
+      width: 358px;
+    }
+  
+    #main-doc {
+      width: 318px;
+    }
+  }
