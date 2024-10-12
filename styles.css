@@ -20,10 +20,11 @@ body {
     border: black solid 5px;
     padding-right: 5px;
     padding: 0;
+    z-index: 1;
 }
 
 #navbar li {
-    border: black solid 1px;
+    border-top: black solid 1px;
     width: 100%;
     padding: 5px;
     margin-bottom: 5px;
@@ -45,21 +46,24 @@ body {
     width: 76%;
     height: 100%;
     /* border: black solid 5px; */
-    padding: 5px;
+    padding-left: 6px;
+    z-index: 0;
 }
 
 @media (max-width: 600px) {
     #navbar {
-      width: 100%;
+      width: 90%;
       height: 20%;
+      position: relative;
     }
     body {
         flex-direction: column;
-        flex-wrap: wrap;
     }
     #main-doc {
-      width: 100%;
+      width: 90%;
       height: 80%;
-      padding-top: 50%;
+      padding-top: 10%;
+      transform: translatex(-4%);
+      text-align: center;
     }
   }
