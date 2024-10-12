@@ -6,6 +6,7 @@ body {
     width: 100%;
     position: relative;
     background-color: #c0c0c0;
+    font-family: sans-serif;
 }
 
 #navbar {
@@ -48,6 +49,24 @@ body {
     /* border: black solid 5px; */
     padding-left: 6px;
     z-index: 0;
+}
+
+header {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 18px;
+}
+
+pre {
+    border: black solid 5px;
+    width: 485px;
+    line-height: 0.1;
+    padding: 5px;
+    text-align: left;
 }
 
 @media (max-width: 600px) {

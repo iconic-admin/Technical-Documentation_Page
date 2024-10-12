@@ -45,65 +45,150 @@
     <main id="main-doc">
         <section class="main-section" id="Getting_User_Input">
             <header>Getting User Input</header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>In C++, user input is typically gathered using the cin object, which stands for "character input." It is part of the iostream library, which must be included at the beginning of your program. The cin object works alongside the extraction operator (>>) to read input directly from the user via the standard input stream, usually the keyboard. The program pauses at the point where cin is called, waiting for the user to provide input. Data entered is then stored in the corresponding variable, and you can specify different types of data such as integers, floating-point numbers, or strings depending on the variable’s type. To prevent errors, it's good practice to validate input where necessary.</p>
+            <p>&nbsp;</p>
+            <p>Example:</p>
+            <p>&nbsp;</p>
+            <pre>
             <code>
-                <p>CODE EXAMPLE</p>
+                <p>#include <iostream></p>
+                <p>using namespace std;</p>
+                <p>&nbsp;</p>
+                <p>int main() {</p>
+                <p>int age;</p>
+                <p>&nbsp;&nbsp;&nbsp;cout << "Enter your age: ";</p>
+                <p>&nbsp;&nbsp;&nbsp;cin >> age;</p>
+                <p>&nbsp;&nbsp;&nbsp;cout << "You entered: " << age << endl;</p>
+                <p>&nbsp;&nbsp;&nbsp;return 0;</p>
+                <p>}</p>
             </code>
+            </pre>
+            <p>&nbsp;</p>
+            <p>In this example, the program prompts the user to enter their age, stores the value in the variable age, and then outputs the value back to the user.</p>
         </section>
         <section class="main-section" id="Returning_Data">
             <header>Returning Data</header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>In C++, functions can return data to the calling function using the return statement. When a function is declared, its return type is specified before the function name. This could be any valid C++ data type, such as int, double, string, or even more complex types like classes or structs. A function with a non-void return type must return a value of the specified type, or the program will not compile. The return statement exits the function and passes the specified value back to the caller. If a function is declared as void, it doesn’t return any value and can omit the return statement, or use it just to terminate the function. Returning data from functions allows for modular and reusable code, enabling complex logic to be broken down into simpler, testable components.</p>
+            <p>&nbsp;</p>
+            <p>Example:</p>
+            <p>&nbsp;</p>
+            <pre>
             <code>
-                <p>CODE EXAMPLE</p>
+                <p>#include <iostream></p>
+                <p>using namespace std;</p>
+                <p>&nbsp;</p>
+                <p>int addNumbers(int a, int b) {</p>
+                <p>&nbsp;&nbsp;&nbsp;return a + b;</p>
+                <p>}</p>
+                <p></p>
+                <p>int main() {</p>
+                <p>&nbsp;&nbsp;&nbsp;int sum = addNumbers(5, 10);</p>
+                <p>&nbsp;&nbsp;&nbsp;cout << "The sum is: " << sum << endl;</p>
+                <p>&nbsp;&nbsp;&nbsp;return 0;</p>
+                <p>}</p>
             </code>
+            </pre>
+            <p>&nbsp;</p>
+            <p>In this example, the function addNumbers returns the sum of two integers. This result is then captured in the sum variable in the main function, and subsequently printed to the console.</p>
         </section>
         <section class="main-section" id="FOR_Loops">
             <header>FOR Loops</header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>In C++, a for loop is a control structure used to repeat a block of code a specific number of times. It is particularly useful when you know in advance how many iterations are needed. The structure of a for loop consists of three main components: initialization, condition, and increment (or decrement). The initialization step is executed once before the loop starts, typically setting up a loop control variable. The condition is checked before each iteration, and if it's true, the loop continues; otherwise, the loop ends. The increment step adjusts the loop control variable after each iteration. For loops are commonly used in scenarios like iterating through arrays, performing operations a fixed number of times, or generating sequences of numbers.</p>
+            <p>&nbsp;</p>
+            <p>Example:</p>
+            <p>&nbsp;</p>
+            <pre>
             <code>
-                <p>CODE EXAMPLE</p>
+                <p>#include <iostream></p>
+                <p>using namespace std;</p>
+                <p>&nbsp;</p>
+                <p>int main() {</p>
+                <p>&nbsp;&nbsp;&nbsp;for (int i = 0; i < 5; i++) {</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;cout << "Iteration number: " << i << endl;</p>
+                <p>&nbsp;&nbsp;&nbsp;}</p>
+                <p>&nbsp;&nbsp;&nbsp;return 0;</p>
+                <p>}</p>
             </code>
+            </pre>
+            <p>&nbsp;</p>
+            <p>In this example, the for loop runs 5 times, with i starting at 0 and incrementing by 1 after each iteration, until it reaches 5. Each iteration prints the current value of i.</p>
         </section>
         <section class="main-section" id="WHILE_Loops">
             <header>WHILE Loops</header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>In C++, a while loop is a control structure that repeatedly executes a block of code as long as a given condition remains true. Unlike a for loop, where the number of iterations is typically known ahead of time, a while loop is more useful in situations where the number of iterations is unknown and depends on a condition that may change dynamically during the program's execution. The loop will continue to execute until the condition evaluates to false. A key difference between a while loop and a for loop is that the former separates the initialization, condition, and incrementation, giving it more flexibility, especially when the condition is based on external factors or user input.</p>
+            <p>&nbsp;</p>
+            <p>Example:</p>
+            <p>&nbsp;</p>
+            <pre>
             <code>
-                <p>CODE EXAMPLE</p>
+                <p>#include <iostream></p>
+                <p>using namespace std;</p>
+                <p>&nbsp;</p>
+                <p>int main() {</p>
+                <p>&nbsp;&nbsp;&nbsp;int i = 0;</p>
+                <p>&nbsp;&nbsp;&nbsp;while (i < 5) {</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;cout << "Iteration number: " << i << endl;</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;i++;</p>
+                <p>&nbsp;&nbsp;&nbsp;}</p>
+                <p>&nbsp;&nbsp;&nbsp;return 0;</p>
+                <p>}</p>
             </code>
+            </pre>
+            <p>&nbsp;</p>
+            <p>In this example, the while loop continues executing as long as the value of i is less than 5. Similar to the for loop example, it prints the value of i during each iteration, but in this case, the condition and increment are handled separately, providing more control over how and when the loop terminates. A while loop is ideal when the number of iterations isn’t predetermined, unlike a for loop where iteration count is usually known upfront.</p>
         </section>
         <section class="main-section" id="Defining_Functions">
             <header>Defining Functions</header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>In C++, a function is a block of code that performs a specific task and can be called from other parts of a program. Defining a function involves specifying its return type, a name, a parameter list (if any), and the function's body. The return type indicates what kind of value the function will return to the caller, or void if the function does not return anything. The name is how the function is identified and called. The parameters, listed in parentheses, allow the function to receive data inputs. Functions are useful for modularizing code, promoting reusability, and making programs easier to understand and maintain. A function definition consists of a header, followed by the function body enclosed in curly braces {}, where the logic of the function is written.</p>
+            <p>&nbsp;</p>
+            <p>Example:</p>
+            <p>&nbsp;</p>
+            <pre>
             <code>
-                <p>CODE EXAMPLE</p>
+                <p>#include <iostream></p>
+                <p>using namespace std;</p>
+                <p>&nbsp;</p>
+                <p>// Function definition</p>
+                <p>int multiply(int a, int b) {</p>
+                <p>&nbsp;&nbsp;&nbsp;return a * b;</p>
+                <p>}</p>
+                <p>&nbsp;</p>
+                <p>int main() {</p>
+                <p>&nbsp;&nbsp;&nbsp;int result = multiply(5, 4);  // Function call</p>
+                <p>&nbsp;&nbsp;&nbsp;cout << "The result is: " << result << endl;</p>
+                <p>&nbsp;&nbsp;&nbsp;return 0;</p>
+                <p>}</p>
             </code>
+            </pre>
+            <p>&nbsp;</p>
+            <p>In this example, the function multiply takes two integer parameters, a and b, and returns their product. The function is then called from the main function, and the result is printed to the console. Functions help structure code logically and allow the same piece of code to be reused with different inputs.</p>
         </section>
         <section class="main-section" id="Common_Use_Cases">
             <header>Common Use Cases</header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>C++ is a versatile and powerful programming language used in a wide range of applications, primarily due to its combination of high performance and object-oriented features. One of its most common use cases is in systems programming, where it's employed to develop operating systems, device drivers, and embedded systems, as it allows low-level memory manipulation and efficient execution. C++ is also widely used in game development, thanks to its ability to handle complex graphics, physics, and real-time performance. Game engines like Unreal Engine are built using C++. Additionally, C++ is used for developing high-performance applications in industries such as finance, where speed and resource efficiency are critical, like in trading platforms or financial modeling. It is also prevalent in software that requires heavy computational tasks, such as simulations, scientific computing, and even artificial intelligence. Other use cases include desktop applications, web browsers (such as Chrome and Firefox), and tools for high-performance computing in scientific and engineering fields. Its standard libraries and cross-platform capabilities make it a go-to language for performance-critical applications.</p>
             <ul>
-                <li>LIST ITEM 1</li>
-                <li>LIST ITEM 2</li>
-                <li>LIST ITEM 3</li>
-                <li>LIST ITEM 4</li>
-                <li>LIST ITEM 5</li>
+                <li>Systems Programming</li>
+                <li>Device Drivers</li>
+                <li>Low-Level Memory Manipulation</li>
+                <li>Game Development</li>
+                <li>Scientific Computing</li>
             </ul>
         </section>
         <section class="main-section" id="Object_Oriented_Programming">
             <header>Object Oriented Programming</header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Object-oriented programming (OOP) is a programming paradigm centered around the concept of "objects," which are instances of classes that encapsulate both data and behavior. OOP allows developers to model real-world entities as objects in code, grouping related properties (data) and methods (functions) into a single, reusable unit. The four main principles of OOP are encapsulation, inheritance, polymorphism, and abstraction. Encapsulation refers to the bundling of data with methods that operate on that data, restricting direct access to some of the object's components to ensure data integrity. Inheritance allows new classes to derive from existing ones, enabling code reuse and the creation of hierarchical relationships. Polymorphism enables objects to be treated as instances of their parent class, allowing the same method to behave differently depending on the object calling it. Abstraction hides complex implementation details and exposes only the essential features of an object. OOP is widely used in modern software development because it promotes code organization, reusability, scalability, and easier maintenance. Languages like C++, Java, and Python heavily rely on this paradigm.</p>
         </section>
         <section class="main-section" id="Memory_Management">
             <header>Memory Management</header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Memory management in C++ is a critical aspect of the language, as it gives developers direct control over the allocation and deallocation of memory. Unlike languages with automatic memory management (such as Java, which uses garbage collection), C++ relies on manual memory handling using the new and delete operators. The new operator is used to dynamically allocate memory on the heap, and the delete operator is used to free that memory when it is no longer needed. This explicit control allows for efficient use of resources, especially in performance-critical applications, but it also introduces the risk of memory leaks and other issues like dangling pointers if memory is not properly managed. C++ also supports stack-based memory allocation, which is handled automatically and is typically faster but limited in scope to the function or block in which it is defined. To simplify memory management and reduce errors, modern C++ (C++11 and later) introduced smart pointers, such as std::unique_ptr and std::shared_ptr, which automatically manage memory and help avoid common pitfalls like memory leaks by ensuring proper deallocation when objects go out of scope. Effective memory management is crucial in C++ to optimize performance and prevent resource wastage or crashes.</p>
         </section>
         <section class="main-section" id="Performance_and_Optimization">
             <header>Performance and Optimization</header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>C++ is renowned for its high performance and flexibility, making it a preferred language for applications where efficiency is crucial. One of the key advantages of C++ is its ability to provide low-level control over system resources, such as memory and CPU usage, allowing developers to fine-tune their programs for optimal performance. Techniques like manual memory management, inlining functions, and choosing the most efficient data structures and algorithms are fundamental to performance optimization in C++. Additionally, C++ allows for the use of both high-level abstractions and low-level hardware interactions, which means developers can write code that is both expressive and highly efficient. Advanced optimization techniques, such as loop unrolling, caching, and parallelism through multithreading and SIMD (Single Instruction, Multiple Data) operations, are often employed to boost performance in compute-heavy tasks. Moreover, C++ compilers, like GCC and Clang, provide a variety of optimization flags that can be used to generate more efficient machine code. By focusing on reducing time complexity, managing resources carefully, and leveraging the language’s powerful features, C++ developers can achieve substantial performance gains, making the language ideal for system software, game engines, real-time simulations, and high-performance computing applications.</p>
         </section>
         <section class="main-section" id="History_and_Evolution_of_C++">
             <header>History and Evolution of C++</header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>C++ was developed in the early 1980s by Bjarne Stroustrup at Bell Labs as an extension of the C programming language, with the goal of adding object-oriented features to C while maintaining its efficiency and low-level capabilities. Originally called "C with Classes," it introduced concepts like classes and inheritance to support modular and reusable code. In 1983, it was renamed C++, with the "++" symbol signifying the language's evolution beyond C. Over the years, C++ has undergone significant changes, becoming more powerful and expressive with each major update. The first official standard, C++98, was released in 1998, followed by C++03, which included minor updates. The most transformative update came with C++11, which introduced modern programming features such as smart pointers, lambda expressions, move semantics, and the auto keyword, significantly enhancing the language's usability and performance. Subsequent versions, like C++14, C++17, and C++20, have continued this trend, bringing even more improvements, including better support for functional programming, parallelism, and concepts (a form of template constraints). Today, C++ remains one of the most widely used programming languages, known for its balance of high-level abstractions and low-level control, making it a versatile tool for everything from embedded systems to high-performance applications.</p>
         </section>
     </main>
 </body>
